@@ -1,4 +1,4 @@
-# haversine
+# haversine.dart
 
 Simple [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) implementation 
 to calculate geographic distance on earth having a pair of Latitude/Longitude points.
