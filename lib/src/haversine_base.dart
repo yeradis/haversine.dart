@@ -35,7 +35,7 @@ class Haversine {
         double lat2 = this.latitude2;
         double lon2 = this.longitude2;
 
-        var EarthRadius = 6371e3; // metres
+        var EarthRadius = 6378137.0; // WGS84 major axis
         double distance = 2 * EarthRadius * asin(
             sqrt(
                 pow(sin(lat2 - lat1) / 2, 2)

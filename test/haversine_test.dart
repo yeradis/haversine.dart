@@ -38,12 +38,27 @@ void main() {
             expect(harvesine.distance(), isZero);
         });
 
-        test('Distance from location1 to location2 should be around 8.529573134008796', () {
-            expect(harvesine.distance(), inInclusiveRange(8.52, 8.53));
+        test('Distance from location1 to location2 should be around 8.53', () {
+            expect(harvesine.distance(), inInclusiveRange(8.5391, 8.5394));
         });
 
         test('Distance from location1 to location2 should greather than 8', () {
             expect(harvesine.distance(), greaterThan(8));
+        });
+
+        test('Distance from location1 to location2 should less than 1', () {
+            final harvesine = new Haversine.fromDegrees(
+                latitude1: 41.140773, longitude1: 1.402221, latitude2: 41.140774, longitude2: 1.402222);
+            expect(harvesine.distance(), lessThan(1.0));
+        });
+
+        test('Distance from location1 to location2 should closer to 8', () {
+            final harvesine = new Haversine.fromDegrees(
+                latitude1: 41.140773, longitude1: 1.402221, latitude2: 41.140716, longitude2: 1.402279);
+            final distance = harvesine.distance();
+
+            expect(distance, greaterThan(7.98));
+            expect(distance, lessThan(8));
         });
     });
 }
