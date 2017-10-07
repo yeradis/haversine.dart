@@ -1,4 +1,4 @@
-# haversine.dart
+# haversine.dart ![Travis status][travis_status]
 
 Simple [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) implementation 
 to calculate geographic distance on earth having a pair of Latitude/Longitude points.
@@ -10,4 +10,6 @@ which is [accurate enough](https://gis.stackexchange.com/questions/25494/how-acc
 
 `Disclaimer`: The earth is not quite a sphere. This means that errors from assuming spherical geometry might be considerable depending on the points, so: `don't trust your life on this value`.
 
-Check [this](https://gis.stackexchange.com/questions/25494/how-accurate-is-approximating-the-earth-as-a-sphere#25580) detailed information. 
+Check [this](https://gis.stackexchange.com/questions/25494/how-accurate-is-approximating-the-earth-as-a-sphere#25580) detailed information.
+
+[travis_status]: https://travis-ci.org/yeradis/haversine.dart.svg?branch=master 
