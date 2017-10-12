@@ -11,6 +11,6 @@ environment:
 #  path: ^1.4.1
 
 dev_dependencies:
-  test: ^0.12.0ç
+  test: ^0.12.0
   coverage: "^0.7.0"
   dart_codecov_generator: "^0.4.0"
