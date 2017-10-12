@@ -1,6 +1,6 @@
 name: haversine
 description: Calculate geographic distance on earth having a pair of Latitude/Longitude points using the Haversine formula.
-version: 1.0.0
+version: 1.0.1
 homepage: https://www.yeradis.com
 author: Yeradis P. Barbosa Marrero <yeradis@gmail.com>
 

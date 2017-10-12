@@ -63,20 +63,19 @@ void main() {
     });
 
     group('Simple coordinate validation tests', () {
-        Haversine harvesine;
-        final lat1 = 41.139129;
-        final lon1 = 1.402244;
-
-        final lat2 = 41.139074;
-        final lon2 = 1.402315;
-
         setUp(() {
-            harvesine = new Haversine.fromDegrees(
-                latitude1: lat1, longitude1: lon1, latitude2: lat2, longitude2: lon2);
         });
 
         test('Having valid coordinates should no throw', () {
-            expect(() => harvesine.distance(), returnsNormally);
+            final lat1 = 41.139129;
+            final lon1 = 1.402244;
+
+            final lat2 = 41.139074;
+            final lon2 = 1.402315;
+
+            expect(() => new Haversine.fromDegrees(
+                latitude1: lat1, longitude1: lon1, latitude2: lat2, longitude2: lon2),
+                returnsNormally);
         });
 
         test('Constructor fromDegrees Having invalid latitude at coordinates 1 should throw FormatException', () {
