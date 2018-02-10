@@ -17,3 +17,6 @@ see [Decimal degrees](https://en.wikipedia.org/wiki/Decimal_degrees)
 
 ## 1.0.1
 Update tests
+
+## 1.0.2
+Minor update to removee the upper bound sdk limit
