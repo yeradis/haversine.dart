@@ -10,7 +10,7 @@ main() {
   final lat2 = 41.139074;
   final lon2 = 1.402315;
 
-  final haversine = new Haversine.fromDegrees(
+  final haversine = Haversine.fromDegrees(
       latitude1: lat1, longitude1: lon1, latitude2: lat2, longitude2: lon2);
 
   print('Distance from location 1 to 2 is : ${haversine.distance()}');

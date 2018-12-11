@@ -80,7 +80,7 @@ void main() {
       final lon2 = 1.402315;
 
       expect(
-          () => new Haversine.fromDegrees(
+          () => Haversine.fromDegrees(
               latitude1: lat1,
               longitude1: lon1,
               latitude2: lat2,
