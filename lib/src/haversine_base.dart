@@ -1,14 +1,17 @@
 import 'dart:math';
 
 class Haversine {
-  double latitude1;
-  double longitude1;
+  late double latitude1;
+  late double longitude1;
 
-  double latitude2;
-  double longitude2;
+  late double latitude2;
+  late double longitude2;
 
   Haversine.fromDegrees(
-      {this.latitude1, this.longitude1, this.latitude2, this.longitude2}) {
+      {double? latitude1, double? longitude1, double? latitude2, double? longitude2}) {
+    if (latitude1 == null || longitude1 == null || latitude2 == null || longitude2 == null) {
+      throw ArgumentError.notNull();
+    }
     this.latitude1 = _radiansFromDegrees(latitude1);
     this.longitude1 = _radiansFromDegrees(longitude1);
 
@@ -19,7 +22,10 @@ class Haversine {
   }
 
   Haversine.fromRadians(
-      {this.latitude1, this.longitude1, this.latitude2, this.longitude2}) {
+      {double? latitude1, double? longitude1, double? latitude2, double? longitude2}) {
+    if (latitude1 == null || longitude1 == null || latitude2 == null || longitude2 == null) {
+      throw ArgumentError.notNull();
+    }
     this.latitude1 = latitude1;
     this.longitude1 = longitude1;
 
